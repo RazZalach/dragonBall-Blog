@@ -1,0 +1,11 @@
+header{
+    height: 100px;
+    background-image: url('../../../assets/headddd.png');
+    background-size: 20% 70%;
+    background-position: center; /* Centers the background image within the container */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+    /* Add any other CSS properties or styles you want for the footer */    
+}
+.site-logo{
+    font-size: 1.5em;
+}

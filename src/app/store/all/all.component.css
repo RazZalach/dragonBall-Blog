@@ -1,0 +1,16 @@
+blockquote.bubble { 
+	
+    margin: 0 auto;
+	text-align: center;
+	height: 0;
+	box-sizing: content-box;
+	line-height: 1;
+}
+blockquote.speech {
+    background: url(https://cdn-icons-png.flaticon.com/512/2598/2598894.png);
+    background-size: 100% 100%;
+    width: 10rem; /* Adjust the width as per your preference */
+    padding-top: 4%; /* Adjust the padding-top as per your preference */
+    padding-bottom: 10%; /* Adjust the padding-bottom as per your preference */
+  }
+  

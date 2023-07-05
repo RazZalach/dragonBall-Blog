@@ -1,0 +1,38 @@
+<app-header-store (categorySelected)="onCategorySelected($event)"></app-header-store>
+
+<div class="container" style="direction: rtl; text-align: right;" dir="rtl" lang="he">
+    <div class="row">
+      <input class="form-control mb-3" style="margin-top: 3% ;" type="search" placeholder="Search characters" aria-label="Search"
+    #searchInput (input)="searchCharacters(searchInput.value)">
+      <div class="col-md-6" *ngFor="let character of characterArray;let i = index">
+        <div class="card mb-4">
+          <img [src]="character.data.image_link" class="card-img-top" style="height: 220px;" alt="Character Image">
+          <div class="card-body">
+            <h5 class="card-title">{{ character.data.name }}</h5>
+            <p class="card-text">{{ character.data.description }}</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">קטגוריה: {{ character.data.category.category }}</li>
+            <li class="list-group-item">רמת כח: {{ character.data.powerLevel }}</li>
+            <li class="list-group-item">סטטוס: {{ character.data.status }}</li>
+          </ul>
+          <div class="card-body" style="text-align: center;">
+            <button routerLink="/character" [queryParams]="{id:character.id}" class="btn btn-primary"><img src="../../../assets/ball.png" style="width: 32px; height: 32px;"> קיראו עוד</button>
+          </div>
+        </div>
+      </div>
+        <div class="banner" style="margin-right: 20px;">
+          <h1 style="text-align: center;">פריזה נגד גוקו</h1>
+          <div class="card mb-3">
+            <video src="../../../assets/1.mp4" controls width="538" height="550" autoplay muted></video>
+          </div>
+        </div>
+        <div class="banner" style="margin-right: 25px;">
+          <h1 style="text-align: center;">סל נגד גוהן</h1>
+          <div class="card mb-3">
+            <video src="../../../assets/2.mp4" controls width="538" height="550" autoplay muted></video>
+          </div>
+        </div>
+    </div>
+  </div>
+  

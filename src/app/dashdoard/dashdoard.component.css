@@ -1,0 +1,27 @@
+.card {
+    height: 200px;
+    cursor: pointer;
+  }
+  
+  .bg-dragon-ball {
+    background-color: #FF0000;
+    color: #FFFFFF;
+  }
+  
+  .text-theme-primary {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .text-theme-primary i {
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+  

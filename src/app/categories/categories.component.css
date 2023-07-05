@@ -1,0 +1,18 @@
+.bg-secondary-theme {
+    background-color: #000000; /* Black background color */
+    color: #FF0000; /* Red text color */
+}
+
+.text-theme-primary {
+    color: #FF0000; /* Red text color */
+    font-weight: bold;
+}
+
+.shadow-effect {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow effect */
+}
+
+.btn-theme {
+    background-color: #FF0000; /* Red background color */
+    color: #FFFFFF; /* White text color */
+}

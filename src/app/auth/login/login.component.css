@@ -1,0 +1,36 @@
+.bg-dragon-ball {
+    /* background-image: url('path/to/dragon-ball-background-image.jpg'); */
+    background-size: cover;
+  }
+  
+  .input-dragon-ball {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #FF0000;
+    border-radius: 0;
+    color: #FF0000;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 20px;
+    transition: border-bottom-color 0.3s ease-in-out;
+  }
+  
+  .input-dragon-ball:focus {
+    outline: none;
+    border-bottom-color: #0000FF;
+  }
+  
+  .btn-theme {
+    background-color: #FF0000;
+    border: none;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px;
+    margin-top: 20px;
+  }
+  
+  .btn-theme:hover {
+    background-color: #0000FF;
+  }
+  

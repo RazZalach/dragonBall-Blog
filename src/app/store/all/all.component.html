@@ -1,0 +1,59 @@
+<div class="container" style="direction: rtl; text-align: right;" dir="rtl" lang="he">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 style="text-align: center;">{{ character?.data.name }}</h2>
+        <div class="card">
+          <img [src]="character?.data.image_link" class="card-img-top" style="height: 400px;" alt="{{ character?.data.name }}">
+          <div class="card-body" style="text-align: center;">
+            <h5 class="card-title">{{ character?.data.category.category }}</h5>
+            <p class="card-text">{{ character?.data.description }}</p>
+            <p><strong>תאריך יצירה:</strong> {{ character?.data.createdAt.toMillis() | date }}</p>
+            <p><strong>רמת כח:</strong> {{ character?.data.powerLevel }}</p>
+            <p><strong>סטטוס:</strong> {{ character?.data.status }}</p>
+            <img [src]="icon" style="width: 300px; height: 200px;" />
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="row mt-4">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-body" style="text-align: center;">
+            <h5 class="card-title">Content</h5>
+            <div [innerHTML]="character?.data.content"></div>
+            <img src="../../../assets/{{ character?.data.name.trim() }}.gif" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-md-12">
+        <div *ngIf="character?.data.comments && character?.data.comments.length > 0">
+          <h5>תגובות</h5>
+          <div class="comment-bubbles">
+            <div class="comment-bubble" *ngFor="let comment of character?.data.comments">
+              
+              <blockquote class="speech bubble">{{ comment }}</blockquote>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">הוסף תגובה</h5>
+            <form [formGroup]="commentForm"> 
+              <textarea id="comment" class="form-control" rows="3" formControlName="comment"></textarea>
+              <button class="btn btn-primary" (click)="addComment()">הוסף תגובה</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-12" style="text-align: center;">
+          <button class="btn btn-primary" routerLink="/">חזרה</button>
+        </div>
+      </div>
+  </div>
+  

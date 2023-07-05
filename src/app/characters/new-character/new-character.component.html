@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h3 class="text-thme-primary">Add New Character</h3>
+            <p class="mb-5">You can add your character here</p>
+        </div>
+    </div>
+    
+    <form [formGroup]="characterForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="card shadow-effect">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" class="form-control" formControlName="name">
+                        </div>
+                        <div class="form-group">
+                            <label>Description</label>
+                            <textarea cols="30" rows="10" class="form-control" formControlName="description"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-5">
+                <div class="form-group">
+                    <label>Please select a character category</label>
+                    <select name="" id="" class="form-control" formControlName="category">
+                        <option value="" disabled>Please select a category</option>
+                        <option *ngFor="let category of categories" value="{{category.id}}-{{category.data.category}}">{{category.data.category}}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Character Image</label>
+                    <img [src]="imgSrc" class="form-control img-fluid img-preview" style="width: 450px; height: 200px;" alt="">
+                    <input type="file" class="form-control" accept="image/*" (change)="showPreview($event)" formControlName="characterImg">
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3 mb-5">
+            <div class="col-md-12">
+                <div class="card shadow-effect">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label>Content</label>
+                            <angular-editor placeholder="Add your content here" formControlName="content"></angular-editor>        
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 text-center mb-5">               
+                <button class="btn btn-info bg-theme" [disabled]="characterForm.invalid">Save Character</button>
+                <button class="btn btn-warning ml-3" routerLink="/characters">Back to Characters</button>
+            </div>
+        </div>
+    </form>
+</div>
