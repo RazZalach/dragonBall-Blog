@@ -11,7 +11,6 @@ import { Character } from '../models/character';
 })
 export class CharactersService {
 
-  
   constructor(private storage: AngularFireStorage,
     private afs: AngularFirestore,
     private toastr: ToastrService,
