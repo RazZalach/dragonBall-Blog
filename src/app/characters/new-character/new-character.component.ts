@@ -38,7 +38,7 @@ export class NewCharacterComponent implements OnInit {
       });
   
       this.characterForm = this.fb.group({
-        name: ['', [Validators.required, Validators.minLength(10)]],
+        name: ['', [Validators.required]],
         description: ['', [Validators.required, Validators.minLength(5)]],
         category: ['', Validators.required],
         characterImg: ['', Validators.required],
@@ -105,7 +105,7 @@ initializeForm(): void {
     let splitted = this.characterForm.value.category.split('-');
   
     let powerLevel;
-    if (splitted[1] === 'Gods' || splitted[1] === "Angels") {
+    if (splitted[1] === 'Gods' || splitted[1] === "Angels" || splitted[1] === "LocalGods" ) {
       powerLevel = '∞'; 
     } else if(splitted[1] === 'Evils' || splitted[1] === "Positives"){
       powerLevel = Math.floor(Math.random() * 999999901) + 100; 

@@ -21,9 +21,9 @@
       <button type="submit" class="dragon-ball-button">העלה וידאו</button>
       <button class="dragon-ball-button" routerLink="/vidoes">חזרה לסרטונים</button>
     </form>
-    <div class="loading-view" *ngIf="isUploading">
+    <div class="loading-view" *ngIf="isUploading || isWaiting">
       <div class="loading-spinner"></div>
-      <p class="loading-message">Uploading...</p>
+      <p class="loading-message">אנא המתינו...</p>
     </div>
   </div>
   

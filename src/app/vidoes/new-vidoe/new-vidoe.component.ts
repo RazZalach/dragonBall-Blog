@@ -10,6 +10,8 @@ export class NewVidoeComponent implements OnInit {
 
   videoForm: FormGroup;
   isUploading: boolean = false;
+  isWaiting: boolean = false;
+
   constructor(
     private formBuilder: FormBuilder,
     private videoService: VidoeService
@@ -27,11 +29,13 @@ export class NewVidoeComponent implements OnInit {
     const { title, description, videoFile } = this.videoForm.value;
     this.videoService.uploadVidoe(title, description, videoFile);
     this.isUploading = true;
-    setTimeout(() => {
-      // Reset the form and hide the loading view after upload is complete
-      this.videoForm.reset();
-      this.isUploading = false;
-    }, 2000);
+    this.isWaiting = true; 
+    // setTimeout(() => {
+    //   // Reset the form and hide the loading view after upload is complete
+    //   //this.videoForm.reset();
+    //   this.isUploading = false;
+    //   this.isWaiting = false; 
+    // }, 100000);
   }
   onFileChange(event) {
     const file = event.target.files[0];

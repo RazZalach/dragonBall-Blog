@@ -1,3 +1,6 @@
+video{
+    width:900; height:550; margin-right: 5%;
+}
 blockquote.bubble { 
 	
     margin: 0 auto;
@@ -12,5 +15,49 @@ blockquote.speech {
     width: 10rem; /* Adjust the width as per your preference */
     padding-top: 4%; /* Adjust the padding-top as per your preference */
     padding-bottom: 10%; /* Adjust the padding-bottom as per your preference */
+  }
+  @media (max-width: 767px) {
+    /* Styles for mobile devices */
+    
+    .container {
+      padding: 0;
+    }
+    
+    .row {
+      margin-right: 0;
+      margin-left: 0;
+    }
+    
+    .card-img-top {
+      height: 200px;
+    }
+    
+    .card-body {
+      padding: 10px;
+    }
+    
+    .card-title {
+      font-size: 1.2rem;
+    }
+    
+    .comment-bubble {
+      margin-bottom: 10px;
+    }
+    
+    blockquote.speech {
+      width: 80%; /* Adjust the width as per your preference */
+      padding-top: 8%; /* Adjust the padding-top as per your preference */
+      padding-bottom: 20%; /* Adjust the padding-bottom as per your preference */
+    }
+    
+    .btn-primary {
+      display: block;
+      margin: 10px auto;
+    }
+    video {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+      }
   }
   
