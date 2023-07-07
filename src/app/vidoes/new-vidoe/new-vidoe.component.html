@@ -1,0 +1,29 @@
+<div class="container" dir="rtl" lang="he">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h3 class="text-theme-primary dragon-ball">הוסף וידאו <span class="dragon-ball">חדש</span></h3>
+        <p class="mb-5 dragon-ball">ניתן להוסיף את הוידאו שלך כאן</p>
+      </div>
+    </div>
+    <form [formGroup]="videoForm" (ngSubmit)="onSubmit()" class="dragon-ball-form">
+      <div>
+        <label for="title" class="dragon-ball-label">כותרת</label>
+        <input type="text" id="title" formControlName="title" class="dragon-ball-input">
+      </div>
+      <div>
+        <label for="description" class="dragon-ball-label">תיאור</label>
+        <textarea id="description" formControlName="description" class="dragon-ball-textarea"></textarea>
+      </div>
+      <div>
+        <label for="videoFile" class="dragon-ball-label">קובץ וידאו</label>
+        <input type="file" id="videoFile" (change)="onFileChange($event)" class="dragon-ball-input">
+      </div>
+      <button type="submit" class="dragon-ball-button">העלה וידאו</button>
+      <button class="dragon-ball-button" routerLink="/vidoes">חזרה לסרטונים</button>
+    </form>
+    <div class="loading-view" *ngIf="isUploading">
+      <div class="loading-spinner"></div>
+      <p class="loading-message">Uploading...</p>
+    </div>
+  </div>
+  

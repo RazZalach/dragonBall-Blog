@@ -11,6 +11,8 @@ import { AuthGuard } from './service/auth.guard';
 import { StoreComponent } from './store/store/store.component';
 import { AllComponent } from './store/all/all.component';
 import { E404Component } from './e404/e404.component';
+import { AllVidoesComponent } from './vidoes/all-vidoes/all-vidoes.component';
+import { NewVidoeComponent } from './vidoes/new-vidoe/new-vidoe.component';
 
 
 const routes: Routes = [
@@ -30,6 +32,10 @@ const routes: Routes = [
 
   { path: 'characters', component: AllCharacterComponent, canActivate: [AuthGuard] },
   { path: 'characters/new', component: NewCharacterComponent, canActivate: [AuthGuard] },
+
+  { path: 'vidoes', component: AllVidoesComponent, canActivate: [AuthGuard] },
+  { path: 'vidoes/new', component: NewVidoeComponent, canActivate: [AuthGuard] },
+
   {path:'**',component:E404Component}
   
 ];

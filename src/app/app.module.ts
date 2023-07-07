@@ -26,7 +26,10 @@ import { StoreComponent } from './store/store/store.component';
 import { HeaderStoreComponent } from './store/header-store/header-store.component';
 
 import { AllComponent } from './store/all/all.component';
-import { E404Component } from './e404/e404.component'; //lie avec storage
+import { E404Component } from './e404/e404.component';
+import { NewVidoeComponent } from './vidoes/new-vidoe/new-vidoe.component';
+import { AllVidoesComponent } from './vidoes/all-vidoes/all-vidoes.component';
+
 
 @NgModule({
   declarations: [
@@ -44,6 +47,9 @@ import { E404Component } from './e404/e404.component'; //lie avec storage
     HeaderStoreComponent,
     AllComponent,
     E404Component,
+    NewVidoeComponent,
+    AllVidoesComponent,
+    
   ],
   imports: [
     BrowserModule,

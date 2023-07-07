@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card shadow-effect bg-secondary-theme">
+          <div class="card-body text-center">
+            <h3 class="text-theme-center">כל הסרטונים</h3>
+            <p class="subtitle">נהל את הסרטונים כמו סופר סאיין</p>
+            <button class="btn btn-info bg-theme" routerLink="/vidoes/new">הוסף סרטון חדש</button>
+            <button class="btn btn-warning ml-2" routerLink="/wm">חזרה לדשבורד</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 mt-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Video List</h5>
+            <ul class="list-group">
+              <ng-container *ngIf="(videos$ | async) as videos">
+                <li *ngFor="let video of videos" class="list-group-item">
+                  <div class="video-card">
+                    <div class="video-details">
+                      <h6 class="card-subtitle mb-2">{{ video.title }}</h6>
+                      <p class="card-text">{{ video.description }}</p>
+                    </div>
+                    <div class="video-player">
+                      <video [src]="video.videoURL" controls></video>
+                    </div>
+                    <button class="btn btn-danger btn-delete" (click)="deleteVideo(video.id)">Delete</button>
+                  </div>
+                </li>
+              </ng-container>
+              <li *ngIf="(videos$ | async)?.length === 0" class="list-group-item">No videos found.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

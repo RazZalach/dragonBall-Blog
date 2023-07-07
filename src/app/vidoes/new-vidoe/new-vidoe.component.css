@@ -1,0 +1,77 @@
+.container {
+    background-color: #f8f8f8;
+    padding: 20px;
+  }
+  
+  .text-theme-primary {
+    color: #ff6600;
+  }
+  
+  .dragon-ball {
+    color: #ff6600;
+  }
+  
+  .dragon-ball-form {
+    margin-top: 20px;
+    text-align: right;
+  }
+  
+  .dragon-ball-label {
+    color: #ff6600;
+    font-weight: bold;
+  }
+  
+  .dragon-ball-input {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  
+  .dragon-ball-textarea {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 100px;
+  }
+  
+  .dragon-ball-button {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .loading-view {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  
+  .loading-spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #ff6600;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+  }
+  
+  .loading-message {
+    color: #777;
+    margin-top: 10px;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  

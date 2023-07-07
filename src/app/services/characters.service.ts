@@ -22,7 +22,7 @@ export class CharactersService {
       console.log(filePath);
   
       this.storage.upload(filePath, selectedImage).then(() => {
-        console.log('post image uploaded successfully');
+        console.log('charcter image uploaded successfully');
         //hash qui fabrique des URL
         this.storage
           .ref(filePath)
@@ -35,6 +35,7 @@ export class CharactersService {
           });
       });
     }
+    
     
     saveData(characterData) {
       characterData.comments = [];

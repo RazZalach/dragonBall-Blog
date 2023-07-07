@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { CharactersService } from 'src/app/services/characters.service';
 import { ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { VidoeService } from 'src/app/services/vidoe.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-all',
@@ -12,10 +14,12 @@ export class AllComponent implements OnInit {
   character: any;
   commentForm: FormGroup;
   icon:any;
+  videos$: Observable<any[]>;
   constructor(
     private route: ActivatedRoute,
     private characterService: CharactersService,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private videoService: VidoeService
   ) {
     this.commentForm = this.fb.group({
       comment: [''] // Add the comment form control
@@ -29,6 +33,7 @@ export class AllComponent implements OnInit {
         this.loadCharacter(characterId);
       }
     });
+    this.videos$ = this.videoService.getAllVideos();
     
   }
 
