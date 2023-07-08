@@ -77,4 +77,23 @@ ul {
       font-size: 16px;
     }
   }
+  .level-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .level {
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .level img {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .level-info {
+    margin-top: 10px;
+  }
   

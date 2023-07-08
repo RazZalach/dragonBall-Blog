@@ -262,5 +262,29 @@
             </div>
     
     </li>
+    <li>
+        <div (click)="toggleItem(6)">
+            <h1 >השלבים של פריזה</h1>
+            <div *ngIf="expandedItems.includes(6)">
+                <div>
+                    <p style="text-align: center;">
+                      <span style="text-decoration: underline; color: #000000;">
+                        <strong>השלבים של פריזה</strong>
+                      </span>
+                    </p>
+                    <div class="level-container">
+                      <div class="level" *ngFor="let level of levels">
+                        <img [src]="level.imageUrl" alt="Level Image" width="300" height="194">
+                        <div class="level-info">
+                          <h4>{{ level.title }}</h4>
+                          <p>{{ level.description }}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+            </div>
+        </div>
+    </li>
   </ul>
   

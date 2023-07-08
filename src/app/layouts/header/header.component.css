@@ -6,6 +6,34 @@ header{
     background-repeat: no-repeat; /* Prevents the background image from repeating */
     /* Add any other CSS properties or styles you want for the footer */    
 }
-.site-logo{
-    font-size: 1.5em;
+
+
+.site-logo {
+    font-size: 1.2em;
+    color: #FF0000; /* Red text color */
+    font-weight: bold;
+    text-transform: uppercase; /* Uppercase letters */
+}
+
+.head {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-direction: row-reverse;
+}
+
+
+
+.head-link {
+    color: #000000; /* White text color */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    
+}
+
+.head-link:hover {
+    color: #FF0000; /* Red text color on hover */
 }
