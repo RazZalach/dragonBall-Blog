@@ -58,13 +58,23 @@
               </ng-container>
 
               <ng-container *ngSwitchDefault>
-                <a href="/info"><h3>לעוד פרטים על סאגות ושחקנים לחצו כאן</h3></a>
+
+                <div [ngSwitch]="character?.data.category.category">
+                  <ng-container *ngSwitchCase="'Gods'">
+                    <a href="/info?item=4"><h3>לעוד פרטים על אלים  לחצו כאן</h3></a>
+                  </ng-container>
+                  <ng-container *ngSwitchCase="'LocalGods'">
+                    <a href="/info?item=4"><h3>לעוד פרטים על סאגת אלים מקומיים לחצו כאן</h3></a>
+                  </ng-container>
+                  <ng-container *ngSwitchDefault>
+                    <a href="/info"><h3>לעוד פרטים על סאגות ושחקנים לחצו כאן</h3></a>
+                  </ng-container>
+                </div>
+
+
+                
               </ng-container>
             </div>
-        
-
-            
-            
           </div>
         </div>
       </div>
