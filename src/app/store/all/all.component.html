@@ -22,14 +22,14 @@
           <div class="card-body" style="text-align: center;">
             <h5 class="card-title">Content</h5>
             <div [innerHTML]="character?.data.content"></div>
-            <img src="../../../assets/{{ character?.data.name.trim() }}.gif" alt="">
+            <img src="../../../assets/gifs/{{ character?.data.name.trim() }}.gif" alt="">
             <ng-container *ngFor="let video of videos$ | async">
               <ng-container *ngIf="video.title.toLowerCase().includes(character?.data.name.toLowerCase())">
                 <div class="banner" style="margin-right: 20px;">
                   <h1 style="text-align: center;">{{ video.title }}</h1>
                   <p style="text-align: center;">{{ video.description }} </p>
                   <div class="card mb-3">
-                    <video [src]="video.videoURL" controls width="900" height="550" style="margin-right: 5%;"></video>
+                    <video [src]="video.videoURL" controls ></video>
                   </div>
                 </div>
               </ng-container>

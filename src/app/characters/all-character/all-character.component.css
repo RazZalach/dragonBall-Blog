@@ -1,3 +1,6 @@
+.table-responsive {
+    overflow-x: auto;
+}
 .subtitle {
     font-size: 18px;
     margin-bottom: 20px;
@@ -26,3 +29,20 @@
     color: #FF0000; /* Red text color */
     font-weight: bold;
 }
+@media (max-width: 767px) {
+    .card-body {
+      padding: 10px;
+    }
+  
+    .btn {
+      margin-top: 10px;
+    }
+  
+    .character-image {
+      width: 100%;
+      height: auto;
+    }
+  
+    /* Adjust other styles as needed for mobile devices */
+  }
+  

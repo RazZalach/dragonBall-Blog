@@ -4,6 +4,11 @@
   background-position: center;
   height: 65vh;
 }
+#vidoesbanner{
+  margin-left: 10px;
+  width: 33.333333%;
+  margin-top: 10%;
+}
 
 .card {
   height: 200px;
@@ -30,4 +35,26 @@
 .text-theme-primary i {
   font-size: 48px;
   margin-bottom: 10px;
+}
+/* Mobile Styles */
+@media (max-width: 767px) {
+  #vidoesbanner{
+    margin-left: 10px;
+    width: 100%;
+    margin-top: 10%;
+  }
+  .banner-row {
+    height: auto;
+    padding: 20px;
+  }
+
+  .card {
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .coll-md-4 {
+    width: 100%;
+    margin-left: 0;
+  }
 }

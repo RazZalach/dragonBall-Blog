@@ -32,6 +32,7 @@ import { AllVidoesComponent } from './vidoes/all-vidoes/all-vidoes.component';
 import { InfoComponent } from './store/info/info.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,6 +52,7 @@ import { InfoComponent } from './store/info/info.component';
     NewVidoeComponent,
     AllVidoesComponent,
     InfoComponent,
+    
     
   ],
   imports: [

@@ -3,7 +3,7 @@
         
     </div>
     <!-- verifie touletent si il la rosu (async) -->
-    <div class="container justify-content-center" *ngIf="isLoggedIn$ | async">
+    <div class="container justify-content-center" style="margin-right: 50%;" *ngIf="isLoggedIn$ | async">
         <a href="#" class="mr-3">{{userEmail}}</a>
         <button class="btn btn-sm btn-info bg-secondary-theme text-theme-primary" (click)="onLogOut()">Logout</button>
     </div>
