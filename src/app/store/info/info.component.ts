@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PicsService } from 'src/app/services/pics.service';
+import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 
 
@@ -13,7 +14,7 @@ export class InfoComponent implements OnInit {
   imageUrls: string[];
   levels: any[];
 
-  constructor(private picsService: PicsService) { 
+  constructor(private picsService: PicsService,private route: ActivatedRoute) { 
     this.picsService.getImageUrls().subscribe((urls) => {
       this.imageUrls = urls;
    
@@ -63,6 +64,12 @@ export class InfoComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.route.queryParams.subscribe(params => {
+      const itemNumber = Number(params['item']);
+      if (!isNaN(itemNumber) && itemNumber >= 0) {
+        this.toggleItem(itemNumber);
+      }
+    });
   }
   toggleItem(item: number): void {
     if (this.expandedItems.includes(item)) {

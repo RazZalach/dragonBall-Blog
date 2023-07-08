@@ -33,7 +33,38 @@
                   </div>
                 </div>
               </ng-container>
+             
             </ng-container>
+            
+            
+            <div [ngSwitch]="character?.data.name">
+              <ng-container *ngSwitchCase="'Jeice'">
+                <a href="/info?item=5#Jeice"><h3>לעוד פרטים על ג׳יס לחצו כאן</h3></a>
+              </ng-container>
+              <ng-container *ngSwitchCase="'Burter'">
+                <a href="/info?item=5#Burter"><h3>לעוד פרטים על בארטר לחצו כאן</h3></a>
+              </ng-container>
+              <ng-container *ngSwitchCase="'Frieza'">
+                <a href="/info?item=6#Frieza"><h3>לעוד פרטים על פריזה לחצו כאן</h3></a>
+                <a href="/info?item=1"><h3>לעוד פרטים על סאגת פריזה לחצו כאן</h3></a>
+              </ng-container>
+              <ng-container *ngSwitchCase="'Cell'">
+                <a href="/info?item=2#Cell"><h3>לעוד פרטים על סל לחצו כאן</h3></a>
+                <a href="/info?item=2"><h3>לעוד פרטים על סאגת סל לחצו כאן</h3></a>
+              </ng-container>
+              <ng-container *ngSwitchCase="'Majin Buu'">
+                <a href="/info?item=3#Majin%20Buu"><h3>לעוד פרטים על מאג׳ין בו לחצו כאן</h3></a>
+                <a href="/info?item=3"><h3>לעוד פרטים על סאגת מאג׳ין בו לחצו כאן</h3></a>
+              </ng-container>
+
+              <ng-container *ngSwitchDefault>
+                <a href="/info"><h3>לעוד פרטים על סאגות ושחקנים לחצו כאן</h3></a>
+              </ng-container>
+            </div>
+        
+
+            
+            
           </div>
         </div>
       </div>
