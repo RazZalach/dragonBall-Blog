@@ -3,6 +3,7 @@ import { CharactersService } from 'src/app/services/characters.service';
 import { ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { VidoeService } from 'src/app/services/vidoe.service';
+import { PicsService } from 'src/app/services/pics.service';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -15,11 +16,13 @@ export class AllComponent implements OnInit {
   commentForm: FormGroup;
   icon:any;
   videos$: Observable<any[]>;
+  gifsArray:any;
   constructor(
     private route: ActivatedRoute,
     private characterService: CharactersService,
     private fb: FormBuilder,
-    private videoService: VidoeService
+    private videoService: VidoeService,
+    private picsService:PicsService
   ) {
     this.commentForm = this.fb.group({
       comment: [''] // Add the comment form control
@@ -34,8 +37,25 @@ export class AllComponent implements OnInit {
       }
     });
     this.videos$ = this.videoService.getAllVideos();
+    this.picsService.getGifsUrls().subscribe((urls) => {
+      this.gifsArray = urls;
+    });
     
   }
+  getGifUrl(characterName: string): string | undefined {
+    if (characterName && Array.isArray(this.gifsArray)) {
+      const gif = this.gifsArray.find((item: any) => {
+        const encodedCharacterName = encodeURIComponent(characterName);
+        return item.includes(encodedCharacterName);
+      });
+      if (gif) {
+        return gif;
+      }
+    }
+    return undefined; // or you can provide a default GIF URL
+  }
+  
+  
 
   loadCharacter(characterId: string): void {
     this.characterService.loadData().subscribe((characters) => {

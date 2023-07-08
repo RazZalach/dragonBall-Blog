@@ -24,4 +24,19 @@ export class PicsService {
       })
     );
   }
+  getGifsUrls():Observable<string[]> {
+    const ref = this.storage.ref("gifs/");
+    return ref.listAll().pipe(
+      switchMap((result) => {
+        const observables: Observable<string | null>[] = [];
+        result.items.forEach((item) => {
+          const promise = item.getDownloadURL();
+          const observable = from(promise);
+          observables.push(observable);
+        });
+        return combineLatest(observables);
+      })
+    );
+  }
+  
 }
