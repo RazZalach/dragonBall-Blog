@@ -13,6 +13,7 @@ import { AllComponent } from './store/all/all.component';
 import { E404Component } from './e404/e404.component';
 import { AllVidoesComponent } from './vidoes/all-vidoes/all-vidoes.component';
 import { NewVidoeComponent } from './vidoes/new-vidoe/new-vidoe.component';
+import { InfoComponent } from './store/info/info.component';
 
 
 const routes: Routes = [
@@ -35,6 +36,8 @@ const routes: Routes = [
 
   { path: 'vidoes', component: AllVidoesComponent, canActivate: [AuthGuard] },
   { path: 'vidoes/new', component: NewVidoeComponent, canActivate: [AuthGuard] },
+
+  { path: 'info', component: InfoComponent},
 
   {path:'**',component:E404Component}
   

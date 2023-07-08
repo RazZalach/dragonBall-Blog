@@ -29,6 +29,7 @@ import { AllComponent } from './store/all/all.component';
 import { E404Component } from './e404/e404.component';
 import { NewVidoeComponent } from './vidoes/new-vidoe/new-vidoe.component';
 import { AllVidoesComponent } from './vidoes/all-vidoes/all-vidoes.component';
+import { InfoComponent } from './store/info/info.component';
 
 
 @NgModule({
@@ -49,6 +50,7 @@ import { AllVidoesComponent } from './vidoes/all-vidoes/all-vidoes.component';
     E404Component,
     NewVidoeComponent,
     AllVidoesComponent,
+    InfoComponent,
     
   ],
   imports: [
