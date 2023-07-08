@@ -56,15 +56,44 @@
                 <a href="/info?item=3#Majin%20Buu"><h3>לעוד פרטים על מאג׳ין בו לחצו כאן</h3></a>
                 <a href="/info?item=3"><h3>לעוד פרטים על סאגת מאג׳ין בו לחצו כאן</h3></a>
               </ng-container>
-
+              <ng-container *ngSwitchCase="'Android17'">
+                <a href="/info?item=2#Android17"><h3>לעוד פרטים על אנדרואיד 17  לחצו כאן</h3></a>
+              </ng-container>
+              <ng-container *ngSwitchCase="'Android18'">
+                <a href="/info?item=2#Android18"><h3>לעוד פרטים על אנדרואיד 18  לחצו כאן</h3></a>
+              </ng-container>
+              <ng-container *ngSwitchCase="'Android13'">
+                <a href="/info?item=2#Android13"><h3>לעוד פרטים על אנדרואיד 13  לחצו כאן</h3></a>
+              </ng-container>
+              <ng-container *ngSwitchCase="'Android19'">
+                <a href="/info?item=2#Android19"><h3>לעוד פרטים על אנדרואיד 19  לחצו כאן</h3></a>
+              </ng-container>
+              <ng-container *ngSwitchCase="'Dr. Gero'">
+                <a href="/info?item=2#Dr.%20Gero"><h3>לעוד פרטים על ד״ר ג׳ירו לחצו כאן</h3></a>
+              </ng-container>
+              <ng-container *ngSwitchCase="'Rikum'">
+                <a href="/info?item=5#Rikum"><h3>לעוד פרטים על ריקום לחצו כאן</h3></a>
+              </ng-container>
+              <ng-container *ngSwitchCase="'Captain Ginyu'">
+                <a href="/info?item=5#Captain%20Ginyu"><h3>לעוד פרטים על קפטן גינאו לחצו כאן</h3></a>
+              </ng-container>
+              <ng-container *ngSwitchCase="'Supreme Kais'">
+                <a href="/info?item=4#Supreme%20Kais"><h3>לעוד פרטים על קאיושין לחצו כאן</h3></a>
+              </ng-container>
+              <ng-container *ngSwitchCase="'King Kai'">
+                <a href="/info?item=4#King%20Kai"><h3>לעוד פרטים על מלכי קאיו לחצו כאן</h3></a>
+              </ng-container>
               <ng-container *ngSwitchDefault>
 
                 <div [ngSwitch]="character?.data.category.category">
                   <ng-container *ngSwitchCase="'Gods'">
-                    <a href="/info?item=4"><h3>לעוד פרטים על אלים  לחצו כאן</h3></a>
+                    <a href="/info?item=4#Gods"><h3>לעוד פרטים על אלים  לחצו כאן</h3></a>
                   </ng-container>
                   <ng-container *ngSwitchCase="'LocalGods'">
-                    <a href="/info?item=4"><h3>לעוד פרטים על סאגת אלים מקומיים לחצו כאן</h3></a>
+                    <a href="/info?item=4"><h3>לעוד פרטים על  אלים מקומיים לחצו כאן</h3></a>
+                  </ng-container>
+                  <ng-container *ngSwitchCase="'Angels'">
+                    <a href="/info?item=4#Angels"><h3>לעוד פרטים על מלאכים לחצו כאן</h3></a>
                   </ng-container>
                   <ng-container *ngSwitchDefault>
                     <a href="/info"><h3>לעוד פרטים על סאגות ושחקנים לחצו כאן</h3></a>
@@ -72,7 +101,7 @@
                 </div>
 
 
-                
+
               </ng-container>
             </div>
           </div>
