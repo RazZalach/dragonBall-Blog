@@ -16,7 +16,7 @@ export class InfoComponent implements OnInit {
   constructor(private picsService: PicsService) { 
     this.picsService.getImageUrls().subscribe((urls) => {
       this.imageUrls = urls;
-      console.log(this.imageUrls);
+   
       
       this.levels = [
         {
