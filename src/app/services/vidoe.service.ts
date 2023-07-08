@@ -32,15 +32,12 @@ export class VidoeService {
             title,
             description,
             filePath: filePath,
-            videoURL: URL, // Save the video URL
+            videoURL: URL, 
             timestamp: Date.now()
           }).then(() => {
-            // Success message or redirection logic
             this.toastr.success('Video uploaded successfully');
-            console.log('Video uploaded successfully');
             this.router.navigate(['/vidoes']);
           }).catch(error => {
-            // Error handling
             this.toastr.error('Failed to upload video');
             console.error(error);
           });

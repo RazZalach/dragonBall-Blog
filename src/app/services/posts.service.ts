@@ -18,18 +18,12 @@ export class PostsService {
 
   uploadImage(selectedImage, postData) {
     const filePath = `postIMG/ ${Date.now()}`;
-    console.log(filePath);
-
     this.storage.upload(filePath, selectedImage).then(() => {
-      console.log('post image uploaded successfully');
-      //hash qui fabrique des URL
       this.storage
         .ref(filePath)
         .getDownloadURL()
         .subscribe((URL) => {
           postData.postImgPath = URL;
-          console.log(postData);
-
           this.saveData(postData);
         });
     });

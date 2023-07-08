@@ -14,7 +14,6 @@ export class StoreComponent implements OnInit {
 
   ngOnInit(): void {
     this.characterService.loadData().subscribe((val) => {
-      console.log(val);
       this.originalCharacterArray = val; // Store the original array
       this.characterArray = val;
     });

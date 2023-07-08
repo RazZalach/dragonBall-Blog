@@ -19,18 +19,12 @@ export class CharactersService {
 
     uploadImage(selectedImage, characterData) {
       const filePath = `characterIMG/ ${Date.now()}`;
-      console.log(filePath);
-  
       this.storage.upload(filePath, selectedImage).then(() => {
-        console.log('charcter image uploaded successfully');
-        //hash qui fabrique des URL
         this.storage
           .ref(filePath)
           .getDownloadURL()
           .subscribe((URL) => {
             characterData.image_link = URL;
-            console.log(characterData);
-  
             this.saveData(characterData);
           });
       });

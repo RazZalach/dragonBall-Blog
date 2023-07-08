@@ -30,12 +30,7 @@ export class NewVidoeComponent implements OnInit {
     this.videoService.uploadVidoe(title, description, videoFile);
     this.isUploading = true;
     this.isWaiting = true; 
-    // setTimeout(() => {
-    //   // Reset the form and hide the loading view after upload is complete
-    //   //this.videoForm.reset();
-    //   this.isUploading = false;
-    //   this.isWaiting = false; 
-    // }, 100000);
+
   }
   onFileChange(event) {
     const file = event.target.files[0];

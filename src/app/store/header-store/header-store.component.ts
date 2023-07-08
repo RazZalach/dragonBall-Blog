@@ -18,7 +18,7 @@ export class HeaderStoreComponent implements OnInit {
 
   ngOnInit(): void {
     this.categoryService.loadData().subscribe(val => {
-      console.log(val);
+     
       this.categoryArray = val;
     });
   }
@@ -40,7 +40,7 @@ export class HeaderStoreComponent implements OnInit {
 
   selectAutocompleteResult(result: any) {
     // Perform the action when an autocomplete result is selected
-    console.log('Selected character:', result);
+   
     // Clear the search input and autocomplete results
     this.searchResults = [];
     // Perform further actions, such as navigating to a character detail page

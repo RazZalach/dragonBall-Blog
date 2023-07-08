@@ -47,7 +47,7 @@ export class AllComponent implements OnInit {
               // Initialize comments field if it doesn't exist
               this.character.data.comments = [];
             }
-            console.log(this.character.data.name);
+       
             fetch(`https://unofficialdbzapi.cyclic.app/api/${this.character.data.name}`)
             .then(response => response.json())
             .then(data =>{ 

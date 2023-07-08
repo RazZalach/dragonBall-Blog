@@ -71,7 +71,7 @@ export class NewCharacterComponent implements OnInit {
 
 
 initializeForm(): void {
-    console.log(this.character);
+    
     this.characterForm = this.fb.group({
       name: [this.character && this.character.data.name ? this.character.data.name : '', this.character ? [] : [Validators.required]],
       description: [this.character && this.character.data.description ? this.character.data.description : '', [Validators.minLength(5)]],
@@ -101,7 +101,7 @@ initializeForm(): void {
   }
 
   onSubmit() {
-    console.log(this.characterForm.value);
+    
     let splitted = this.characterForm.value.category.split('-');
   
     let powerLevel;

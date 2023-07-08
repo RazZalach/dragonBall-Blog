@@ -12,7 +12,7 @@ export class AllCharacterComponent implements OnInit {
 
   ngOnInit(): void {
     this.characterService.loadData().subscribe((val) => {
-      console.log(val);
+      
       this.characterArray = val;
     });
   }

@@ -15,7 +15,7 @@ export class CategoriesService {
       .collection('categories')
       .add(data)
       .then((docRef) => {
-        console.log(docRef);
+    
         this.toastr.success('Data Insert Successfully.. !');
       })
       .catch((err) => {

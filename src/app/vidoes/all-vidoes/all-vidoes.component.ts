@@ -20,12 +20,12 @@ export class AllVidoesComponent implements OnInit {
     if (confirm('Are you sure you want to delete this video?')) {
       this.videoService.deleteVideo(videoId)
         .then(() => {
-          console.log('Video deleted successfully');
-          // Optional: Show a success message
+       
+       
         })
         .catch(error => {
           console.error('Failed to delete video:', error);
-          // Optional: Show an error message
+        
         });
     }
   }
